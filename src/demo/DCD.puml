@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+interface Payment {
+makePayment(amount: double)
+}
+class PayPalPayment {
+makePayment(amount: double)
+}
+class CreditCardPayment {
+makePayment(amount: double )
+}
+class BankTransferPayment {
+makePayment(amount: double)
+}
+Payment <|.. PayPalPayment
+Payment <|.. CreditCardPayment
+Payment <|.. BankTransferPayment
+
+
+
+@enduml
